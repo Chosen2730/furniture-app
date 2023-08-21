@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavNavigation from "./navigation/BottomTabNavNavigation";
 import Cart from "./screens/Cart";
 import ProductDetails from "./screens/ProductDetails";
+import NewArrivals from "./screens/newArrivals";
 export default function App() {
   const [fontsLoaded] = useFonts({
     regular: require("./assets/fonts/Poppins-Regular.ttf"),
@@ -43,6 +44,11 @@ export default function App() {
         <Stack.Screen
           name='ProductDetails'
           component={ProductDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name='Arrivals'
+          component={NewArrivals}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
